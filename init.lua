@@ -190,6 +190,24 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Remap for going into Netrw Explorer MINE
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+
+-- Remap for grabbing 1 or more lines and move them as a unit MINE
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
+-- Remap for scrolling half a page up and down, then centering screen MINE
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+
+-- Remap for searching a term and once go to the next term, it centers screen MINE
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+
+-- Remap for when yanking a word to have that word available for paste MINE
+vim.keymap.set('x', '<leader>p', '"_dP')
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
