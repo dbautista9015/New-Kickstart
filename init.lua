@@ -933,7 +933,6 @@ require('lazy').setup({
       -- You can configure highlights by doing something like:
       vim.cmd.colorscheme 'rose-pine-moon'
       vim.cmd.hi 'Comment gui=none'
-      }
     end,
   },
 
