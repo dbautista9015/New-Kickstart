@@ -238,6 +238,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Add line number and relative numbers when using netrw explorer buffer
 vim.api.nvim_create_autocmd('FileType', {
   pattern = 'netrw',
   callback = function()
